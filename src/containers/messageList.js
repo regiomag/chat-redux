@@ -17,6 +17,10 @@ class MessageList extends Component {
         })}
       </div>
     );
+  // reload messages every x sec
+  // componentDidMount () {
+  //   var intervalID = window.setInterval(code, 5);
+  // }
   }
 }
 

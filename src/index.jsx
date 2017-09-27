@@ -17,9 +17,20 @@ import selectedChannel from './reducers/selectedChannelReducer.js';
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
-// State and reducers
+// Initial states, only for starting
+// const messagesIni= [
+// {
+//     "author":"anonymous92",
+//     "content":"Hello world!",
+//     "created_at":"2017-09-26T23:03:16.365Z"
+//   },
+//   {
+//     "author":"anonymous77",
+//     "content":"My name is anonymous77",
+//     "created_at":"2017-09-26T23:03:21.194Z"
+//   }
+// ];
 
-//
 // define intials states
 const initialState = {
   messages: [],
