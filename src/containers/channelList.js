@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import { fetchMessages } from '../actions/index';
 // import { fetchMessages } from '../actions/index';
 
 class ChannelList extends Component {

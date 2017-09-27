@@ -7,11 +7,11 @@ import MessageForm from '../containers/messageForm';
 const App = () => {
   return (
     <div className="row">
-        <div className="col-xs-6">
+        <div className="col-xs-3 bg_channels">
           <ChannelList />
-          <MessageForm />
         </div>
-        <div className="col-xs-6">
+        <div className="col-xs-9 bg_grey">
+          <MessageForm />
           <MessageList />
         </div>
     </div>
