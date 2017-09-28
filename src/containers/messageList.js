@@ -14,7 +14,8 @@ class MessageList extends Component {
       <div className="message-list">
         { this.props.messages.map((message) => {
           return <Message message={message} key={message.id} />
-        })}
+          }
+        )}
       </div>
     );
   // reload messages every x sec

@@ -1,33 +1,39 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchMessages } from '../actions/index';
-// import { fetchMessages } from '../actions/index';
+import ChannelsContainer from './channelsContainer';
+import { fetchChannels } from '../actions/index';
 
 class ChannelList extends Component {
-  // componentWillMount () {
-  //   this.props.fetchMessages(this.props.channel);
-  // }
+  componentWillMount () {
+    this.props.fetchChannels(this.props.channel);
+  }
   render () {
     return (
       <div>
-        Channel list
+        {this.props.selectedChannel}
       </div>
     );
   }
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     messages: state.messages,
-//     channel: state.selectedChannel
-//   };
-// }
+function mapStateToProps(state) {
+  return {
+    channels: state.channels,
+    channel: state.selectedChannel
+  };
+}
 
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators(
-//     { fetchMessages: fetchMessages }, dispatch);
-// }
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators(
+    { fetchChannels: fetchChannels }, dispatch);
+}
 
-export default ChannelList;
-// export default connect(mapStateToProps, mapDispatchToProps)(ChannelList);
+// export default ChannelList;
+export default connect(mapStateToProps, mapDispatchToProps)(ChannelList);
+
+
+// { this.props.messages.map((channel) => {
+//   return <Channel channel={channel} key={channel.id} />
+//   })
+// }
